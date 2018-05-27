@@ -2,4 +2,6 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} ^443$
 RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^upmines-upsdc\.herokuapp\.com$
+RewriteRule ^$ http://upmines-upsdc-gov-in.epizy.com/? [L,R=301]
 </IfModule>
