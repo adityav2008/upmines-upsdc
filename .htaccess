@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond   %{HTTP_HOST}   !^upmines-upsdc.gov.in$         [NC]
+RewriteRule   (.*)           https://upmines-upsdc.gov.in/$1  [L,R=301]
