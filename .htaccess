@@ -1,3 +1,5 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond   %{HTTP_HOST}   !^upmines-upsdc.gov.in$         [NC]
-RewriteRule   (.*)           https://upmines-upsdc.gov.in/$1  [L,R=301]
+RewriteCond %{SERVER_PORT} ^443$
+RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
